@@ -1,2 +1,3 @@
 # BIOL343_CC
-Coding Challenges
+
+Coding Challenges for BIOL 343
