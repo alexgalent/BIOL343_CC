@@ -1,3 +1,3 @@
 # BIOL343_CC
 
-Coding Challenges for BIOL 343
+Coding Challenge 2 for BIOL 343 Group 2
