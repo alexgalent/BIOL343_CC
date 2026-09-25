@@ -21,7 +21,7 @@ Replace the single `output: html_document` line in the YAML header above with th
 Write the group members as an **ordered list** (Chapter 5, *Lists*). For each member give the **name in bold**, then the student number, and then a **sub-item** containing a clickable **link** to that member's GitHub repository, written with Markdown link syntax (Chapter 5, *Links*).
 
 1. **Alex Galentovsky** — 20335070
-    + [BIOL343_CC](https://github.com/your_user_name/BIOL343_CC)
+    + [BIOL343_CC](https://github.com/alexgalent/BIOL343_CC)
  
 
 # Setup chunk
@@ -35,15 +35,14 @@ knitr::opts_chunk$set(echo = TRUE)
 # Data dictionary
 
 Write a **Markdown table** (Chapter 5, *Tables*) with three columns — variable, description, units — and one row for each of these variables from the Coding Challenge 1 dataset: `population_type`, `ovary_width`, `ovary_height`, `flower_number`. Use the *pipes and dashes* format from the chapter, not R code.
-
-Table 
+ 
 -------------------------------
 Variable | Description | Units
 ---------|--------------|------
 population_type | sexual or asexual | categorical
 ovary_width | width of flower's ovary | mm
 ovary_height | height of flower's ovary | mm
-flower_number | assigned # of individual flower | categorial
+flower_number | assigned # of individual flower | categorical
 
 # Import and clean the data
 
@@ -73,7 +72,7 @@ tail(cc1_data)
 Write the formula you used for ovary area as a **full-line equation** in LaTeX (Chapter 5, *Equations*), using `\times` for multiplication. Then, in a sentence of ordinary text, state its units using an **in-line equation** with a superscript.
 
 $$
-\text{ovary\_area} = \text{ovary\_width} \times \text{ovary\_height}
+ovary\ area = ovary\ width \times ovary\ height
 $$
 The units of the ovary area $mm^{2}$
 
@@ -90,7 +89,7 @@ area_means = aggregate(ovary_area ~ population_type, data=cc1_data, mean)
 
 **b.** Display `area_means` with `kable()` from the `knitr` package (Chapter 5, *Dynamic Tables*), including a `caption`. This chunk should show the **table but not the code**.
 
-```{r area-table, eacho=FALSE}
+```{r area-table, echo=FALSE}
 knitr::kable(area_means, caption = "Mean Areas of Ovary Width by Population Type")
 ```
 

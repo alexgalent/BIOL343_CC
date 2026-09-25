@@ -357,15 +357,6 @@ display: none;
 </div>
 
 
-<div id="do-this-first" class="section level1 unnumbered">
-<h1 class="unnumbered">DO THIS FIRST</h1>
-<p>Copy and paste this into your R Console to start positpal, but
-replace <code>FILENAME.Rmd</code> with the name you are going to use for
-the .R or .Rmd file you are going to upload (for this challenge, rename
-the template first, e.g. <code>Group_#_CC2.Rmd</code>, and use that
-exact name). <strong>Do not include it as a code chunk.</strong></p>
-<p>install.packages(“remotes”) remotes::install_url(“<a href="https://quantitative.bio/downloads/positpal.tar.gz" class="uri">https://quantitative.bio/downloads/positpal.tar.gz</a>”,
-upgrade = “never”) positpal::start(“Group_5_CC2.Rmd”)</p>
 <p>Before you run it: open the project folder for this challenge in
 Positron (<em>File → Open Folder…</em>) so that it is your working
 directory, save this file in that folder under the name you will upload,
@@ -379,7 +370,6 @@ your project is filling up with files. If it is not, or if
 <code>positpal::doctor(&quot;FILENAME.Rmd&quot;)</code> and bring the output to
 tutorial or office hours. Run the <code>start()</code> line again at the
 start of every session you spend on this file.</p>
-</div>
 <div id="yaml-header" class="section level1">
 <h1>YAML header</h1>
 <p>Replace the single <code>output: html_document</code> line in the
@@ -400,7 +390,7 @@ to that member’s GitHub repository, written with Markdown link syntax
 <ol style="list-style-type: decimal">
 <li><strong>Alex Galentovsky</strong> — 20335070
 <ul>
-<li><a href="https://github.com/your_user_name/BIOL343_CC">BIOL343_CC</a></li>
+<li><a href="https://github.com/alexgalent/BIOL343_CC">BIOL343_CC</a></li>
 </ul></li>
 </ol>
 </div>
@@ -419,8 +409,7 @@ of these variables from the Coding Challenge 1 dataset:
 <code>population_type</code>, <code>ovary_width</code>,
 <code>ovary_height</code>, <code>flower_number</code>. Use the <em>pipes
 and dashes</em> format from the chapter, not R code.</p>
-<div id="table" class="section level2">
-<h2>Table</h2>
+<hr />
 <table>
 <thead>
 <tr class="header">
@@ -448,11 +437,10 @@ and dashes</em> format from the chapter, not R code.</p>
 <tr class="even">
 <td>flower_number</td>
 <td>assigned # of individual flower</td>
-<td>categorial</td>
+<td>categorical</td>
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <div id="import-and-clean-the-data" class="section level1">
 <h1>Import and clean the data</h1>
@@ -466,8 +454,10 @@ the cleaned data as <code>cc1_data</code>.</p>
 cc1_data = cc1_data[1:46, 1:8]
 cc1_data$ovary_area = cc1_data$ovary_width * cc1_data$ovary_height
 names(cc1_data)</code></pre>
-<pre><code>## [1] &quot;population_type&quot;            &quot;population_name&quot;            &quot;latitude&quot;                   &quot;longitude&quot;                 
-## [5] &quot;ovary_width&quot;                &quot;ovary_height&quot;               &quot;average_august_temperature&quot; &quot;flower_number&quot;             
+<pre><code>## [1] &quot;population_type&quot;            &quot;population_name&quot;           
+## [3] &quot;latitude&quot;                   &quot;longitude&quot;                 
+## [5] &quot;ovary_width&quot;                &quot;ovary_height&quot;              
+## [7] &quot;average_august_temperature&quot; &quot;flower_number&quot;             
 ## [9] &quot;ovary_area&quot;</code></pre>
 <p>Now document the inspection commands you used (<code>class()</code>,
 <code>dim()</code>, <code>str()</code>, <code>head()</code>,
@@ -488,7 +478,7 @@ equation</strong> in LaTeX (Chapter 5, <em>Equations</em>), using
 text, state its units using an <strong>in-line equation</strong> with a
 superscript.</p>
 <p><span class="math display">\[
-\text{ovary\_area} = \text{ovary\_width} \times \text{ovary\_height}
+ovary\ area = ovary\ width \times ovary\ height
 \]</span> The units of the ovary area <span class="math inline">\(mm^{2}\)</span></p>
 </div>
 <div id="dynamic-table" class="section level1">
@@ -502,7 +492,6 @@ the result as <code>area_means</code>. This chunk should run but be
 <code>kable()</code> from the <code>knitr</code> package (Chapter 5,
 <em>Dynamic Tables</em>), including a <code>caption</code>. This chunk
 should show the <strong>table but not the code</strong>.</p>
-<pre class="r"><code>knitr::kable(area_means, caption = &quot;Mean Areas of Ovary Width by Population Type&quot;)</code></pre>
 <table>
 <caption>Mean Areas of Ovary Width by Population Type</caption>
 <thead>
