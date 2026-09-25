@@ -454,9 +454,15 @@ the cleaned data as <code>cc1_data</code>.</p>
 cc1_data = cc1_data[1:46, 1:8]
 cc1_data$ovary_area = cc1_data$ovary_width * cc1_data$ovary_height
 names(cc1_data)</code></pre>
-<pre><code>## [1] &quot;population_type&quot;            &quot;population_name&quot;            &quot;latitude&quot;                  
-## [4] &quot;longitude&quot;                  &quot;ovary_width&quot;                &quot;ovary_height&quot;              
-## [7] &quot;average_august_temperature&quot; &quot;flower_number&quot;              &quot;ovary_area&quot;</code></pre>
+<pre><code>## [1] &quot;population_type&quot;           
+## [2] &quot;population_name&quot;           
+## [3] &quot;latitude&quot;                  
+## [4] &quot;longitude&quot;                 
+## [5] &quot;ovary_width&quot;               
+## [6] &quot;ovary_height&quot;              
+## [7] &quot;average_august_temperature&quot;
+## [8] &quot;flower_number&quot;             
+## [9] &quot;ovary_area&quot;</code></pre>
 <p>Now document the inspection commands you used (<code>class()</code>,
 <code>dim()</code>, <code>str()</code>, <code>head()</code>,
 <code>tail()</code>) in the chunk below. Add the chunk option that
@@ -491,7 +497,7 @@ the result as <code>area_means</code>. This chunk should run but be
 <em>Dynamic Tables</em>), including a <code>caption</code>. This chunk
 should show the <strong>table but not the code</strong>.</p>
 <table>
-<caption>Mean Areas of Ovary Width by Population Type</caption>
+<caption>Mean Ovary Area by Population Type</caption>
 <thead>
 <tr class="header">
 <th align="left">population_type</th>
